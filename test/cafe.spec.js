@@ -3,6 +3,7 @@ const {Bebida} = require('../bebidas.js')
 describe('Precios de café y colacao', () => {
   describe('Bebidas simples', () => {
     it('Café', () => {
+      console.log(Bebida(),"XXXXXXXXXXXXXXXXXXXXXXX")
       expect(Bebida().cafe().precio()).to.equal(1)
     })
     it('Colacao', () => {
