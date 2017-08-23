@@ -17,12 +17,12 @@ const Bebida = (precio = 0) => ({
   conSoja: () => Bebida(precio + coste.soja),
   conLeche: () => Bebida(precio + coste.leche),
   conNata: () => Bebida(precio + coste.nata),
-  add: (aditivo) => Bebida(precio + aditivo())
+  add: (aditivo) => Bebida(precio + aditivo)
 })
 
 module.exports.Bebida = Bebida
-module.exports.nata = () => coste.nata
-module.exports.orujo = () => coste.orujo
-module.exports.canela = () => coste.canela
-module.exports.soja = () => coste.soja
-module.exports.leche = () => coste.leche
+module.exports.nata = coste.nata
+module.exports.orujo = coste.orujo
+module.exports.canela = coste.canela
+module.exports.soja = coste.soja
+module.exports.leche = coste.leche
