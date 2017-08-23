@@ -15,5 +15,8 @@ describe('Precios de café y colacao', () => {
     it('Carajillo', () => {
       expect(Bebida().cafe().conOrujo().precio()).to.equal(2)
     })
+    it('Colacao con canela', () => {
+      expect(Bebida().colacao().conCanela().precio()).to.equal(2)
+    })
   })
 })
