@@ -17,5 +17,10 @@ describe('Precios de café y colacao', () => {
     it('Colacao con canela', () => {
       expect(Bebida().colacao().conCanela().precio()).to.be.closeTo(1.35, 0.001)
     })
+    it('Todos los demas', () => {
+      expect(Bebida().cafe().conSoja().precio()).to.be.closeTo(1.20, 0.001)
+      expect(Bebida().cafe().conLeche().conNata().precio()).to.be.closeTo(1.60, 0.001)
+      expect(Bebida().cafe().conLeche().conLeche().conNata().conOrujo().precio()).to.be.closeTo(2.70, 0.001)
+    })
   })
 })
