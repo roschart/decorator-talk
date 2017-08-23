@@ -20,9 +20,4 @@ const Bebida = (precio = 0) => ({
   add: (aditivo) => Bebida(precio + aditivo)
 })
 
-module.exports.Bebida = Bebida
-module.exports.nata = coste.nata
-module.exports.orujo = coste.orujo
-module.exports.canela = coste.canela
-module.exports.soja = coste.soja
-module.exports.leche = coste.leche
+module.exports = Object.assign({Bebida}, coste)
