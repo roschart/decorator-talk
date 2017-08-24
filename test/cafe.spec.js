@@ -25,6 +25,8 @@ describe('Precios de café y colacao', () => {
   })
 
   describe('Metodo add', () => {
-    expect(Bebida().cafe().add(leche).add(leche).add(nata).add(orujo).precio()).to.be.closeTo(2.70, 0.001)
+    it('add', () => {
+      expect(Bebida().cafe().add(leche).add(leche).add(nata).add(orujo).precio()).to.be.closeTo(2.70, 0.001)
+    })
   })
 })

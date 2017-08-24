@@ -24,6 +24,8 @@ describe('DECORATOR:Precios de café y colacao', () => {
     })
   })
   describe('Metodo add', () => {
-    expect(addTodDrik(Orujo, addTodDrik(Nata, addTodDrik(Leche, addTodDrik(Leche, Cafe())))).precio()).to.be.closeTo(2.70, 0.001)
+    it('add', () => {
+      expect(addTodDrik(Orujo, addTodDrik(Nata, addTodDrik(Leche, addTodDrik(Leche, Cafe())))).precio()).to.be.closeTo(2.70, 0.001)
+    })
   })
 })

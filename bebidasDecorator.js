@@ -17,4 +17,6 @@ const Soja = bebida => ({ precio: () => bebida.precio() + coste.soja })
 const Leche = bebida => ({ precio: () => bebida.precio() + coste.leche })
 const Nata = bebida => ({ precio: () => bebida.precio() + coste.nata })
 
-module.exports = {Cafe, Colacao, Orujo, Canela, Soja, Leche, Nata}
+const addTodDrik = (aditivo, bebida) => ({precio: () => aditivo(bebida).precio()})
+
+module.exports = {Cafe, Colacao, Orujo, Canela, Soja, Leche, Nata, addTodDrik}
