@@ -10,7 +10,7 @@ const coste = {
 
 const Bebida = precio => ({
   precio: () => precio,
-  add: aditivo => Bebida(aditivo(Bebida(precio)).precio())
+  add: aditivo => aditivo(Bebida(precio))
 })
 
 const Cafe = () => Bebida(coste.cafe)
@@ -23,6 +23,3 @@ const Leche = bebida => Bebida(bebida.precio() + coste.leche)
 const Nata = bebida => Bebida(bebida.precio() + coste.nata)
 
 module.exports = {Cafe, Colacao, Orujo, Canela, Soja, Leche, Nata}
-
-console.log(Orujo(Cafe()).precio())
-// console.log(Cafe().add(Orujo))
