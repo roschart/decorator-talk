@@ -10,6 +10,7 @@ const coste = {
 
 const Cafe = () => ({precio: () => coste.cafe})
 const Colacao = () => ({precio: () => coste.colacao})
+
 const Orujo = bebida => ({ precio: () => bebida.precio() + coste.orujo })
 const Canela = bebida => ({ precio: () => bebida.precio() + coste.canela })
 const Soja = bebida => ({ precio: () => bebida.precio() + coste.soja })

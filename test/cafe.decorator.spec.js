@@ -1,5 +1,5 @@
 const expect = require('chai').expect
-const {Cafe, Colacao, Orujo, Canela, Soja, Leche, Nata} = require('../bebidasDecorator.js')
+const {Cafe, Colacao, Orujo, Canela, Soja, Leche, Nata, addTodDrik} = require('../bebidasDecorator.js')
 describe('DECORATOR:Precios de café y colacao', () => {
   describe('Bebidas simples', () => {
     it('Café', () => {
@@ -22,5 +22,8 @@ describe('DECORATOR:Precios de café y colacao', () => {
       expect(Nata(Leche(Cafe())).precio()).to.be.closeTo(1.60, 0.001)
       expect(Orujo(Nata(Leche(Leche(Cafe())))).precio()).to.be.closeTo(2.70, 0.001)
     })
+  })
+  describe('Metodo add', () => {
+    expect(addTodDrik(Orujo, addTodDrik(Nata, addTodDrik(Leche, addTodDrik(Leche, Cafe())))).precio()).to.be.closeTo(2.70, 0.001)
   })
 })
