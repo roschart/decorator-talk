@@ -42,6 +42,11 @@ namespace Bebidas
         {
             Assert.AreEqual(new Cafe().Add<Leche>().Add<Leche>().Add<Nata>().Add<Orujo>().Precio, 2.70M);
         }
+        [TestMethod]
+        public void EspecialDobleShoot()
+        {
+            Assert.AreEqual(new Cafe().Add<Cafe>().Add<Leche>().Add<Leche>().Add<Nata>().Add<Orujo>().Precio, 3.70M);
+        }
 
     }
 }
