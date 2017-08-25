@@ -1,8 +1,8 @@
-using Bebidas.Bebidas;
+using Bebidas.Vendibles;
 
 namespace Bebidas.Aditivos
 {
-    public class Aditivo
+    public class Aditivo:IVendible
     {
 
         public Aditivo(decimal precio) => Precio = precio;
