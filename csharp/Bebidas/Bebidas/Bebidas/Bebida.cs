@@ -1,3 +1,5 @@
+using Bebidas.Aditivos;
+
 namespace Bebidas.Bebidas
 {
     public class Bebida
@@ -5,7 +7,7 @@ namespace Bebidas.Bebidas
         public Bebida(decimal precio) => Precio = precio;
 
         public decimal Precio { get; set; }
-        public Bebida Add<T>() where T : Bebida, new()
+        public Bebida Add<T>() where T : Aditivo, new()
         {
 
             return new Bebida(Precio + new T().Precio);

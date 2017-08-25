@@ -2,7 +2,7 @@ using Bebidas.Bebidas;
 
 namespace Bebidas.Aditivos
 {
-    public class Canela : Bebida
+    public class Canela : Aditivo
     {
         public Canela() : base(Coste.Canela)
         {
