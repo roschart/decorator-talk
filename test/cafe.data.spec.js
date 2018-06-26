@@ -18,12 +18,22 @@ describe('Data oriented design', () => {
     })
 
     describe('Bebidas con complementos', () => {
-      it('Carajillo Data', () => {
-        expect(add(Cafe, Orujo)).to.deep.equal({ bebida: "combinado", precio: 2, base:  { bebida: "cafe", precio: 1.0 }, aditivos: [{ aditivo: "orujo", precio: 1 }] })
+      it('Carajillo', () => {
+        expect(add(Cafe, Orujo)).to.deep.equal(
+          {
+            bebida: "combinado", precio: 2,
+            base: { bebida: "cafe", precio: 1.0 },
+            aditivos: [{ aditivo: "orujo", precio: 1 }]
+          })
       })
-      // it('Colacao con canela', () => {
-      //   expect(Colacao().add(Canela).precio()).to.be.closeTo(1.35, 0.001)
-      // })
+      it('Colacao con canela', () => {
+        expect(add(Colacao, Canela)).to.deep.equal(
+          {
+            bebida: "combinado", precio: 1.35,
+            base: { bebida: "colacao", precio: 1.2 },
+            aditivos: [{ aditivo: "canela", precio: 0.15 }]
+          })
+      })
       // it('Todos los demas', () => {
       //   expect(Cafe().add(Soja).precio()).to.be.closeTo(1.20, 0.001)
       //   expect(Cafe().add(Leche).add(Nata).precio()).to.be.closeTo(1.60, 0.001)
