@@ -15,19 +15,19 @@ describe('Data oriented design', () => {
       it('Price Colacao', () => {
         expect(Colacao().precio).to.equal(1.20)
       })
+    })
 
-      // describe('Bebidas con complementos', () => {
-      //   it('Carajillo', () => {
-      //     expect(Cafe().add(Orujo).precio()).to.equal(2)
-      //   })
-      //   it('Colacao con canela', () => {
-      //     expect(Colacao().add(Canela).precio()).to.be.closeTo(1.35, 0.001)
-      //   })
-      //   it('Todos los demas', () => {
-      //     expect(Cafe().add(Soja).precio()).to.be.closeTo(1.20, 0.001)
-      //     expect(Cafe().add(Leche).add(Nata).precio()).to.be.closeTo(1.60, 0.001)
-      //     expect(Cafe().add(Leche).add(Leche).add(Nata).add(Orujo).precio()).to.be.closeTo(2.70, 0.001)
-      //   })
+    describe('Bebidas con complementos', () => {
+      it('Carajillo Data', () => {
+        expect(Cafe().add(Orujo)).to.deep.equal({bebida: "cafe", precio: 2, precioBase: 1  , aditivos: [{aditivo: "orujo", prercio: 1}] })
+      })
+      // it('Colacao con canela', () => {
+      //   expect(Colacao().add(Canela).precio()).to.be.closeTo(1.35, 0.001)
+      // })
+      // it('Todos los demas', () => {
+      //   expect(Cafe().add(Soja).precio()).to.be.closeTo(1.20, 0.001)
+      //   expect(Cafe().add(Leche).add(Nata).precio()).to.be.closeTo(1.60, 0.001)
+      //   expect(Cafe().add(Leche).add(Leche).add(Nata).add(Orujo).precio()).to.be.closeTo(2.70, 0.001)
       // })
     })
   })
