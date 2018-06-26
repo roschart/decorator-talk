@@ -1,20 +1,10 @@
-const bebidas = {
-  cafe: { bebida: "cafe", precio: 1 },
-  colacao: { bebida: "colacao", precio: 1.2 },
-  orujo: { aditivo: "orujo", precio: 1 },
-  canela: { aditivo: "canela", precio: 0.15},
-  soja: { aditivo: "soja", precio: 0.20},
-  leche: { aditivo: "leche", precio: 0.10},
-  nata: { aditivo: "nata", precio: 0.50}
-}
-
-const Cafe = () => bebidas.cafe
-const Colacao = () => bebidas.colacao
-const Orujo = () => bebidas.orujo
-const Canela = () => bebidas.canela
-const Soja = () => bebidas.soja
-const Leche = () => bebidas.leche
-const Nata = () => bebidas.nata
+const Cafe = () => ({ bebida: "cafe", precio: 1 })
+const Colacao = () => ({ bebida: "colacao", precio: 1.2 })
+const Orujo = () => ({ aditivo: "orujo", precio: 1 })
+const Canela = () => ({ aditivo: "canela", precio: 0.15})
+const Soja = () => ({ aditivo: "soja", precio: 0.20})
+const Leche = () => ({ aditivo: "leche", precio: 0.10})
+const Nata = () => ({ aditivo: "nata", precio: 0.50})
 
 const add = (bebida, ...adits) => {
   let base = bebida()
