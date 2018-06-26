@@ -34,11 +34,31 @@ describe('Data oriented design', () => {
             aditivos: [{ aditivo: "canela", precio: 0.15 }]
           })
       })
-      // it('Todos los demas', () => {
-      //   expect(Cafe().add(Soja).precio()).to.be.closeTo(1.20, 0.001)
-      //   expect(Cafe().add(Leche).add(Nata).precio()).to.be.closeTo(1.60, 0.001)
-      //   expect(Cafe().add(Leche).add(Leche).add(Nata).add(Orujo).precio()).to.be.closeTo(2.70, 0.001)
-      // })
+      it('Todos los demas', () => {
+        expect(add(Cafe, Soja)).to.deep.equal(
+          {
+            bebida: "combinado", precio: 1.2,
+            base: { bebida: "cafe", precio: 1 },
+            aditivos: [{ aditivo: "soja", precio: 0.2 }]
+          })
+        expect(add(Cafe, Leche, Nata)).to.deep.equal(
+          {
+            bebida: "combinado", precio: 1.60,
+            base: { bebida: "cafe", precio: 1 },
+            aditivos: [{ aditivo: "leche", precio: 0.10 },
+            { aditivo: "nata", precio: 0.50 }]
+          })
+        expect(add(Cafe, Leche, Leche, Nata, Orujo)).to.deep.equal(
+          {
+            bebida: "combinado", precio: 2.70,
+            base: { bebida: "cafe", precio: 1 },
+            aditivos: [
+              { aditivo: "leche", precio: 0.10 },
+              { aditivo: "leche", precio: 0.10 },
+              { aditivo: "nata", precio: 0.50 },
+              { aditivo: "orujo", precio: 1 }]
+          })
+      })
     })
   })
 })
