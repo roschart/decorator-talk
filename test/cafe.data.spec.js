@@ -19,7 +19,7 @@ describe('Data oriented design', () => {
 
     describe('Bebidas con complementos', () => {
       it('Carajillo Data', () => {
-        expect(Cafe().add(Orujo)).to.deep.equal({bebida: "cafe", precio: 2, precioBase: 1  , aditivos: [{aditivo: "orujo", prercio: 1}] })
+        expect(Add(Cafe, Orujo)).to.deep.equal({ bebida: "combinado", precio: 2, base: { bebida: { bebida: "cafe", precio: 1.0 } }, aditivos: [{ aditivo: "orujo", precio: 1 }] })
       })
       // it('Colacao con canela', () => {
       //   expect(Colacao().add(Canela).precio()).to.be.closeTo(1.35, 0.001)
