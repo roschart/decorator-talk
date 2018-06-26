@@ -1,5 +1,5 @@
 const expect = require('chai').expect
-const { Cafe, Colacao, Orujo, Canela, Soja, Nata, Leche } = require('../bebidasData.js')
+const { Cafe, Colacao, Orujo, Canela, Soja, Nata, Leche, add } = require('../bebidasData.js')
 describe('Data oriented design', () => {
   describe('Precios de café y colacao', () => {
     describe('Bebidas simples', () => {
@@ -19,7 +19,7 @@ describe('Data oriented design', () => {
 
     describe('Bebidas con complementos', () => {
       it('Carajillo Data', () => {
-        expect(Add(Cafe, Orujo)).to.deep.equal({ bebida: "combinado", precio: 2, base: { bebida: { bebida: "cafe", precio: 1.0 } }, aditivos: [{ aditivo: "orujo", precio: 1 }] })
+        expect(add(Cafe, Orujo)).to.deep.equal({ bebida: "combinado", precio: 2, base:  { bebida: "cafe", precio: 1.0 }, aditivos: [{ aditivo: "orujo", precio: 1 }] })
       })
       // it('Colacao con canela', () => {
       //   expect(Colacao().add(Canela).precio()).to.be.closeTo(1.35, 0.001)
