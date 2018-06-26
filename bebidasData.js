@@ -1,6 +1,6 @@
 const bebidas = {
   cafe: {bebida: "cafe", precio: 1},
-  colacao: 1.20,
+  colacao: {bebida: "colacao", precio: 1.2},
   orujo: 1,
   canela: 0.15,
   soja: 0.20,
@@ -9,7 +9,7 @@ const bebidas = {
 }
 
 const Cafe = () => bebidas.cafe
-// const Colacao = () => Bebida(coste.colacao)
+const Colacao = () => bebidas.colacao
 
 // const Orujo = bebida => Bebida(bebida.precio() + coste.orujo)
 // const Canela = bebida => Bebida(bebida.precio() + coste.canela)
@@ -19,4 +19,4 @@ const Cafe = () => bebidas.cafe
 
 // module.exports = {Cafe, Colacao, Orujo, Canela, Soja, Leche, Nata}
 
-module.exports = {Cafe}
+module.exports = {Cafe, Colacao}
